@@ -45,20 +45,20 @@ switch(command) {
       return
     } else {
       fs.mkdirSync(`${currentDir}/${name}`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/config.js`, `${currentDir}/${name}/config.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/cfg.js`, `${currentDir}/${name}/config.js`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/.gitignore`, `${currentDir}/${name}/.gitignore`)
 
       fs.mkdirSync(`${currentDir}/${name}/.tmp`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/.tmp/main.js`, `${currentDir}/${name}/.tmp/main.js`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/.tmp/transpile.js`, `${currentDir}/${name}/.tmp/transpile.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/main.js`, `${currentDir}/${name}/.tmp/main.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/transpile.js`, `${currentDir}/${name}/.tmp/transpile.js`)
 
       fs.mkdirSync(`${currentDir}/${name}/public`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/public/favicon.ico`, `${currentDir}/${name}/public/favicon.ico`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/public/index.html`, `${currentDir}/${name}/public/index.html`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/pub/favicon.ico`, `${currentDir}/${name}/public/favicon.ico`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/pub/index.html`, `${currentDir}/${name}/public/index.html`)
       fs.mkdirSync(`${currentDir}/${name}/public/data`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/public/data/gdp.json`, `${currentDir}/${name}/public/data/gdp.json`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/pub/data/gdp.json`, `${currentDir}/${name}/public/data/gdp.json`)
       fs.mkdirSync(`${currentDir}/${name}/public/topos`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/public/topos/world110m.json`, `${currentDir}/${name}/public/topos/world110m.json`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/pub/topos/world110m.json`, `${currentDir}/${name}/public/topos/world110m.json`)
 
       fs.mkdirSync(`${currentDir}/${name}/back`)
       fs.mkdirSync(`${currentDir}/${name}/front`)

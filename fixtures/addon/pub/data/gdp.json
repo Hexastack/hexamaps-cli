@@ -1,0 +1,562 @@
+[
+  {
+    "name": "AUS",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 48829.027796,
+    "Flag Codes": ""
+  },
+  {
+    "name": "AUT",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 50923.693301,
+    "Flag Codes": ""
+  },
+  {
+    "name": "BEL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 46784.979375,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CAN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 44819.498023,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CZE",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 34714.434668,
+    "Flag Codes": ""
+  },
+  {
+    "name": "DNK",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 49833.312815,
+    "Flag Codes": ""
+  },
+  {
+    "name": "FIN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 43446.124099,
+    "Flag Codes": ""
+  },
+  {
+    "name": "FRA",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 41357.835264,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "DEU",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 49187.306457,
+    "Flag Codes": ""
+  },
+  {
+    "name": "GRC",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 27116.553831,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "HUN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 26741.361611,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ISL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 51781.224445,
+    "Flag Codes": ""
+  },
+  {
+    "name": "IRL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 70879.955583,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ITA",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 38581.076518,
+    "Flag Codes": ""
+  },
+  {
+    "name": "JPN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 42292.681306,
+    "Flag Codes": ""
+  },
+  {
+    "name": "KOR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 36629.655177,
+    "Flag Codes": ""
+  },
+  {
+    "name": "LUX",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 102593.508569,
+    "Flag Codes": ""
+  },
+  {
+    "name": "MEX",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 18535.16689,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "NLD",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 50961.235694,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "NZL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 39241.025516,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "NOR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 58834.460566,
+    "Flag Codes": ""
+  },
+  {
+    "name": "POL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 27093.682924,
+    "Flag Codes": ""
+  },
+  {
+    "name": "PRT",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 30821.510667,
+    "Flag Codes": ""
+  },
+  {
+    "name": "SVK",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 30487.384823,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ESP",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 36338.997401,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "SWE",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 48690.146437,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CHE",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 64025.876779,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "TUR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 25655.471775,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "GBR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 42757.048917,
+    "Flag Codes": ""
+  },
+  {
+    "name": "USA",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 57797.462214,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CHL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 23003.91117,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CHN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 15477.980833,
+    "Flag Codes": ""
+  },
+  {
+    "name": "COL",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 14011.612739,
+    "Flag Codes": ""
+  },
+  {
+    "name": "EST",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 30564.570312,
+    "Flag Codes": ""
+  },
+  {
+    "name": "IND",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 6730.580999,
+    "Flag Codes": ""
+  },
+  {
+    "name": "IDN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 11720.226825,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ISR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 37460.903522,
+    "Flag Codes": ""
+  },
+  {
+    "name": "RUS",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 24788.679645,
+    "Flag Codes": ""
+  },
+  {
+    "name": "SVN",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 32729.606427,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ZAF",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 13334.987018,
+    "Flag Codes": ""
+  },
+  {
+    "name": "EU28",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 39734.50839,
+    "Flag Codes": ""
+  },
+  {
+    "name": "OECD",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 42262.329123,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "OECDE",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 39309.762886,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "LVA",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 25703.957528,
+    "Flag Codes": ""
+  },
+  {
+    "name": "BRA",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 15224.54744,
+    "Flag Codes": "E"
+  },
+  {
+    "name": "LTU",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 30002.21073,
+    "Flag Codes": ""
+  },
+  {
+    "name": "SAU",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 54304.320339,
+    "Flag Codes": ""
+  },
+  {
+    "name": "EA19",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 42277.425624,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ARG",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 20382.379902,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CRI",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 16381.3827,
+    "Flag Codes": ""
+  },
+  {
+    "name": "BGR",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 19242.661345,
+    "Flag Codes": ""
+  },
+  {
+    "name": "HRV",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 23859.838656,
+    "Flag Codes": ""
+  },
+  {
+    "name": "CYP",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 33371.52349,
+    "Flag Codes": "P"
+  },
+  {
+    "name": "MLT",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 37276.63359,
+    "Flag Codes": ""
+  },
+  {
+    "name": "ROU",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 23129.568656,
+    "Flag Codes": ""
+  },
+  {
+    "name": "MKD",
+    "INDICATOR": "GDP",
+    "SUBJECT": "TOT",
+    "MEASURE": "USD_CAP",
+    "FREQUENCY": "A",
+    "TIME": 2016,
+    "value": 14793.321582,
+    "Flag Codes": "E"
+  }
+]

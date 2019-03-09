@@ -1,6 +1,6 @@
 {
   "name": "dotmap-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Command line interface for managing dotmap's addons.",
   "main": "index.js",
   "bin": {
@@ -8,9 +8,8 @@
   },
   "files": [
     "fixtures/**/*",
-    "index.js",
-    "package.js",
-    "yarn.lock"
+    "*.js",
+    "*.json"
   ],
   "keywords": [
     "cli",
