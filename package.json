@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "description": "Command line interface for managing dotmap's addons.",
   "main": "index.js",
+  "files": [
+    "fixtures/*",
+    "index.js",
+    "package.js",
+    "yarn.lock"
+  ],
   "keywords": [
     "cli",
     "addon",
@@ -14,6 +20,7 @@
     "url": "https://github.com/Hexastack/dotmap-cli.git"
   },
   "author": "Hexastack <contact@hexastack.com>",
+  "license": "BSD-4-Clause",
   "dependencies": {
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
