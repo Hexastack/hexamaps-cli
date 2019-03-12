@@ -46,7 +46,7 @@ switch(command) {
     } else {
       fs.mkdirSync(`${currentDir}/${name}`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/cfg.js`, `${currentDir}/${name}/config.js`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/.gitignore`, `${currentDir}/${name}/.gitignore`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/ignore`, `${currentDir}/${name}/.gitignore`)
 
       fs.mkdirSync(`${currentDir}/${name}/.tmp`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/main.js`, `${currentDir}/${name}/.tmp/main.js`)

@@ -11,6 +11,17 @@ export default {
         set: (arg) => this[d] = arg
       })
     }
+    // events
+    if (plugin.entityOnClick) {
+      Vue.prototype.entityOnClick = (e, entity) => {
+        return plugin.entityOnClick(e, entity.expose.wrap(), entity[plugin.name], entity.map.data)
+      }
+    }
+    if (plugin.entityOnHover) {
+      Vue.prototype.entityOnHover = (e, entity) => {
+        return plugin.entityOnHover(e, entity.expose.wrap(), entity[plugin.name], entity.map.data)
+      }
+    }
     Vue.mixin({
       created () {
         if (this.type) {

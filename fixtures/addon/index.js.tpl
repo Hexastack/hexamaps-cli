@@ -9,6 +9,13 @@ export default {
   entity (entity, plugin) {
 
   },
+  // entityOnClick (e, entity, plugin, data) {
+  //   return entity
+  // },
+  // entityOnHover (e, entity, plugin, data) {
+  //   return entity
+  // },
+
   mapComponents(map, plugin) {
     return []
   },

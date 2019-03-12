@@ -8,11 +8,18 @@ const App = {
   components: {
     DmMap
   },
-  render: h => h('dm-map'),
+  render: function (createElement) {
+    return createElement ('dm-map', {props: {
+      projection: this.projection,
+      withGraticule: this.withGraticule
+    }
+  })},
   data () {
     return {
       data: [],
-      source: config.mapSource
+      source: config.mapSource,
+      projection: config.projection,
+      withGraticule: config.withGraticule
     }
   },
   mounted () {
