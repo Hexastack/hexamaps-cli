@@ -10,7 +10,7 @@
   "license": "GPL",
   "dependencies": {
     "vue": "^2.6.8",
-    "dotmap.js": "^0.2.0"
+    "dotmap.js": "^0.3.0"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.1",
