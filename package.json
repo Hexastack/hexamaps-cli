@@ -1,10 +1,10 @@
 {
-  "name": "dotmap-cli",
-  "version": "0.0.6",
-  "description": "Command line interface for managing dotmap's addons.",
+  "name": "hexamaps-cli",
+  "version": "0.1.0",
+  "description": "Command line interface for developing hexamaps' addons.",
   "main": "index.js",
   "bin": {
-    "dotmap-cli": "./index.js"
+    "hexamaps-cli": "./index.js"
   },
   "files": [
     "fixtures/**/*",
@@ -14,12 +14,12 @@
   "keywords": [
     "cli",
     "addon",
-    "dotmap",
+    "hexamaps",
     "ES6"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hexastack/dotmap-cli.git"
+    "url": "https://github.com/Hexastack/hexamaps-cli.git"
   },
   "author": "Hexastack <contact@hexastack.com>",
   "license": "BSD-4-Clause",

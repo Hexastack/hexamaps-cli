@@ -1,16 +1,16 @@
 import Vue from 'vue'
-import { DmMap } from 'dotmap.js'
+import { HmMap } from 'hexamaps'
 import config from '../config'
 import transpile from './transpile'
 
 const plugin = transpile()
 
-const dmMap = DmMap(plugin)
+const HmMap = Map(plugin)
 const App = {
-  name: 'App',
+  name: 'HexaMap',
   render: function (createElement) {
     return createElement (
-      dmMap,
+      HmMap,
       {props:
         {
           projection: this.projection,
@@ -31,7 +31,7 @@ const App = {
     this.load(config.dataSource)
   },
   provide () {
-    const map = {data: [], source: '', world: { objects: []}}
+    const map = {data: [], source: ''}
     Object.defineProperty(map, 'data', {
        enumerable: true,
        get: () => this.data

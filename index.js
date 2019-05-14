@@ -13,7 +13,7 @@ const currentDir  = process.cwd()
 clear()
 console.log(
   chalk.rgb(239, 203, 104)(
-    figlet.textSync('DotMap', { horizontalLayout: 'full' })
+    figlet.textSync('HexaMaps', { horizontalLayout: 'full' })
   )
 )
 
@@ -37,7 +37,7 @@ const name = args._[1] || ''
 switch(command) {
   case 'init':
     if (!name) {
-      console.error(chalk.red('`init` must have the addon name as argument, for instance `dotmap init myAddon`'))
+      console.error(chalk.red('`init` must have the addon name as argument, for instance `hexamaps-cli init myAddon`'))
       return
     }
     if (fs.existsSync(`${currentDir}/${name}`)) {
@@ -65,12 +65,12 @@ switch(command) {
       fs.mkdirSync(`${currentDir}/${name}/components`)
       fs.writeFileSync(
         `${currentDir}/${name}/index.js`,
-        fs.readFileSync(`${__dirname}/fixtures/addon/index.js.tpl`, 'utf8')
+        fs.readFileSync(`${__dirname}/fixtures/addon/index.js`, 'utf8')
           .replace(/##name##/g, name)
       )
       fs.writeFileSync(
         `${currentDir}/${name}/package.json`,
-        fs.readFileSync(`${__dirname}/fixtures/addon/package.json.tpl`, 'utf8')
+        fs.readFileSync(`${__dirname}/fixtures/addon/package.json.sample`, 'utf8')
           .replace(/##name##/g, name)
       )
 
@@ -106,7 +106,7 @@ switch(command) {
     )
     vueCLI.on('exit', (code) => {
       if (code !== 0) {
-        console.error(chalk.red(`'DotMap run' exited with code ${code}`))
+        console.error(chalk.red(`'hexamaps-cli run' exited with code ${code}`))
       }
       return
     })

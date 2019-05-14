@@ -1,7 +1,7 @@
-Usage: dotmap <command>
+Usage: hexamaps <command>
 
 Where <command> is one of:
-    init    : Create a new dotmap addon project.
+    init    : Create a new hexamaps addon project.
     test    : Runs unit test for your addon.
-    lint    : Ensures the addons follows dotmap codding conventions.
-    publish : Upload the addon to the dotmap platform.
+    lint    : Ensures the addons follows hexamaps codding conventions.
+    publish : Upload the addon to the hexamaps platform.

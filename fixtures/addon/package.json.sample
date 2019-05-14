@@ -1,16 +1,16 @@
 {
-  "name": "##name##",
+  "name": "hm-addon-##name##",
   "version": "0.0.1",
-  "description": "##name##, dotmap addon",
+  "description": "##name##, hexamaps addon",
   "main": "index.js",
   "scripts": {
-    "run": "dotmap run"
+    "run": "hexamaps-cli run"
   },
   "author": "",
   "license": "GPL",
   "dependencies": {
     "vue": "^2.6.8",
-    "dotmap.js": "^0.3.0"
+    "hexamaps": "^0.4.0"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.1",
