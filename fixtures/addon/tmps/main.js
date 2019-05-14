@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { HmMap } from 'hexamaps'
+import { HmMap as Map } from 'hexamaps'
 import config from '../config'
 import transpile from './transpile'
 

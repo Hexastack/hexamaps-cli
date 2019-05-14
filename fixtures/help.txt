@@ -1,4 +1,4 @@
-Usage: hexamaps <command>
+Usage: hexamaps-cli <command>
 
 Where <command> is one of:
     init    : Create a new hexamaps addon project.
