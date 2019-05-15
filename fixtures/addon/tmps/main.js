@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import { HmMap as Map } from 'hexamaps'
+import { HmMap as Map, transpile } from 'hexamaps'
 import config from '../config'
-import transpile from './transpile'
+import addons from './addons'
 
-const plugin = transpile()
+const plugins = transpile(addons)
 
-const HmMap = Map(plugin)
+const HmMap = Map(plugins)
 const App = {
   name: 'HexaMap',
   render: function (createElement) {
@@ -60,7 +60,7 @@ const App = {
 
 Vue.config.productionTip = false
 
-Vue.use(plugin.entry)
+Vue.use(plugins.entry)
 
 new Vue({
   render: h => h(App),

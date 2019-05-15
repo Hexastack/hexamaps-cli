@@ -50,7 +50,7 @@ switch(command) {
 
       fs.mkdirSync(`${currentDir}/${name}/.tmp`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/main.js`, `${currentDir}/${name}/.tmp/main.js`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/transpile.js`, `${currentDir}/${name}/.tmp/transpile.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/addons.js`, `${currentDir}/${name}/.tmp/addons.js`)
 
       fs.mkdirSync(`${currentDir}/${name}/public`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/pub/favicon.ico`, `${currentDir}/${name}/public/favicon.ico`)
@@ -60,7 +60,6 @@ switch(command) {
       fs.mkdirSync(`${currentDir}/${name}/public/topos`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/pub/topos/world110m.json`, `${currentDir}/${name}/public/topos/world110m.json`)
 
-      fs.mkdirSync(`${currentDir}/${name}/back`)
       fs.mkdirSync(`${currentDir}/${name}/front`)
       fs.mkdirSync(`${currentDir}/${name}/components`)
       fs.writeFileSync(
