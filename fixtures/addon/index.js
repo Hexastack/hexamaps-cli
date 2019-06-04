@@ -4,7 +4,10 @@ export default {
   // mapData
   // define your plugin data that will be used on the map
   // example
-  // initialZoom: 4
+  // initialZoom: {
+  //  default: 4,
+  //  type: 'number'
+  // }
   mapData: {
     
   },

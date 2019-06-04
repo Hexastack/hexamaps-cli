@@ -10,7 +10,7 @@
   "license": "GPL",
   "dependencies": {
     "vue": "^2.6.8",
-    "hexamaps": "^0.4.2"
+    "hexamaps": "^0.5.1"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.1",
