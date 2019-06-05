@@ -13,7 +13,7 @@ const App = {
       HmMap,
       {props:
         {
-          projection: this.projection,
+          projectionName: this.projectionName,
           withGraticule: this.withGraticule
         }
       }
@@ -23,7 +23,7 @@ const App = {
     return {
       data: [],
       source: config.mapSource,
-      projection: config.projection,
+      projectionName: config.projectionName,
       withGraticule: config.withGraticule
     }
   },
