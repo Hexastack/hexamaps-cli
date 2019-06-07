@@ -48,7 +48,7 @@ switch(command) {
       fs.copyFileSync(`${__dirname}/fixtures/addon/cfg.js`, `${currentDir}/${name}/config.js`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/ignore`, `${currentDir}/${name}/.gitignore`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/map.js`, `${currentDir}/${name}/map.js`)
-      fs.copyFileSync(`${__dirname}/fixtures/addon/entity.js`, `${currentDir}/${name}/.entity.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/entity.js`, `${currentDir}/${name}/entity.js`)
 
       fs.mkdirSync(`${currentDir}/${name}/.tmp`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/main.js`, `${currentDir}/${name}/.tmp/main.js`)
@@ -75,18 +75,18 @@ switch(command) {
           .replace(/##name##/g, name)
       )
 
-      const npmInstall = spawn('npm', ['install', '--prefix', `./${name}`],
+      const yarnInstall = spawn('yarn', ['install', '--prefix', `./${name}`],
         {
           detached: false,
           stdio: 'inherit'
         }
       )
-      npmInstall.on('exit', (code) => {
+      yarnInstall.on('exit', (code) => {
         if (code !== 0) {
           console.warn(chalk.yellow(`Could not install dependencies.`))
           console.warn(chalk.yellow(`You can install them, by running:`))
           console.warn(chalk.yellow(`cd ${name}`))
-          console.warn(chalk.yellow(`npm i`))
+          console.warn(chalk.yellow(`yarn install`))
         }
         return
       })
