@@ -1,2 +1,2 @@
-import addon from '../index'
+import addon from '.'
 export default [addon]

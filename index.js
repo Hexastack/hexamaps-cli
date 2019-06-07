@@ -47,6 +47,8 @@ switch(command) {
       fs.mkdirSync(`${currentDir}/${name}`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/cfg.js`, `${currentDir}/${name}/config.js`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/ignore`, `${currentDir}/${name}/.gitignore`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/map.js`, `${currentDir}/${name}/map.js`)
+      fs.copyFileSync(`${__dirname}/fixtures/addon/entity.js`, `${currentDir}/${name}/.entity.js`)
 
       fs.mkdirSync(`${currentDir}/${name}/.tmp`)
       fs.copyFileSync(`${__dirname}/fixtures/addon/tmps/main.js`, `${currentDir}/${name}/.tmp/main.js`)
@@ -63,8 +65,8 @@ switch(command) {
       fs.mkdirSync(`${currentDir}/${name}/front`)
       fs.mkdirSync(`${currentDir}/${name}/components`)
       fs.writeFileSync(
-        `${currentDir}/${name}/index.js`,
-        fs.readFileSync(`${__dirname}/fixtures/addon/index.js`, 'utf8')
+        `${currentDir}/${name}/.tmp/index.js`,
+        fs.readFileSync(`${__dirname}/fixtures/addon/tmps/index.js`, 'utf8')
           .replace(/##name##/g, name)
       )
       fs.writeFileSync(
