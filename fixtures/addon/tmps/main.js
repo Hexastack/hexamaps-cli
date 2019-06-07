@@ -3,7 +3,7 @@ import { HmMap as Map, transpile } from 'hexamaps'
 import config from '../config'
 import addons from './addons'
 
-const plugins = transpile(addons)
+const { plugins } = transpile(addons)
 
 const HmMap = Map(plugins)
 const App = {
