@@ -3,48 +3,52 @@ import { HmMap as Map, transpile } from 'hexamaps'
 import config from '../config'
 import addons from './addons'
 
-const { plugins } = transpile(addons)
+const { plugins, editables } = transpile(addons)
+
+for (let addonName in config.addonsConfig) {
+  for (let attr in config.addonsConfig[addonName].map) {
+    editables[addonName].map.values[attr] = config.addonsConfig[addonName].map[attr]
+  }
+}
 
 const HmMap = Map(plugins)
-const App = {
+const Hexamaps = {
   name: 'HexaMap',
   render: function (createElement) {
-    return createElement (
-      HmMap,
-      {props:
-        {
-          projectionName: this.projectionName,
-          withGraticule: this.withGraticule
-        }
-      }
-    )
+    return createElement(HmMap)
   },
   data () {
     return {
       data: [],
-      source: config.mapSource,
-      projectionName: config.projectionName,
-      withGraticule: config.withGraticule
+      source: config.sourceUrl,
+      config: config.config
     }
   },
   mounted () {
-    this.load(config.dataSource)
+    this.config = config.config
+    this.load(config.dataUrl)
   },
   provide () {
-    const map = {data: [], source: ''}
+    const map = { data: [], source: '', config: defaultConfig }
     Object.defineProperty(map, 'data', {
-       enumerable: true,
-       get: () => this.data
+      enumerable: true,
+      get: () => this.data,
+      set: (data) => this.data = data
+    })
+    Object.defineProperty(map, 'config', {
+      enumerable: true,
+      get: () => this.config,
+      set: (config) => this.config = config
     })
     Object.defineProperty(map, 'source', {
-       enumerable: true,
-       get: () => this.source
+      enumerable: true,
+      get: () => this.source
     })
     return { map }
   },
   methods: {
-    load (dataSource) {
-      fetch(dataSource)
+    load(dataUrl) {
+      fetch(dataUrl)
         .then(response => {
           return response.json()
         })
@@ -60,8 +64,9 @@ const App = {
 
 Vue.config.productionTip = false
 
-Vue.use(plugins.entry)
+Vue.use(plugins.entry, { editor: false })
 
 new Vue({
-  render: h => h(App),
+  editor: false,
+  render: h => h(Hexamaps)
 }).$mount('#app')

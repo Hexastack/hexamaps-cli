@@ -75,7 +75,7 @@ switch(command) {
           .replace(/##name##/g, name)
       )
 
-      const yarnInstall = spawn('yarn', ['install', '--prefix', `./${name}`],
+      const yarnInstall = spawn('yarn', ['install', '--cwd', `./${name}`],
         {
           detached: false,
           stdio: 'inherit'
@@ -91,6 +91,21 @@ switch(command) {
         return
       })
     }
+    break
+  case 'build':
+    //./node_modules/.bin/vue-cli-service build --target lib --name incept ./.tmp/index.js
+    const vueCLI = spawn(`${__dirname}/node_modules/.bin/vue-cli-service`, ['build', '--target', 'lib', '--name', name, '.tmp/main.js'],
+      {
+        detached: false,
+        stdio: 'inherit'
+      }
+    )
+    vueCLI.on('exit', (code) => {
+      if (code !== 0) {
+        console.error(chalk.red(`'hexamaps-cli build' exited with code ${code}`))
+      }
+      return
+    })
     break
   case 'test':
     break
