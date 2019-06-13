@@ -3,13 +3,32 @@ import { HmMap as Map, transpile } from 'hexamaps'
 import config from '../config'
 import addons from './addons'
 
+const defaultConfig = {
+  land: '#1a0e02',
+  border: '#aaa',
+  sea: '#80b5d5',
+  width: 800,
+  height: 600,
+  zoom: 1,
+  scale: 1,
+  initialScale: 1,
+  x: 0,
+  y: 0,
+  theta: -11,
+  phi: 0,
+  angle: 0,
+  projectionName: 'geoMercator',
+  withGraticule: false,
+  withOutline: true
+}
+
 const { plugins, editables } = transpile(addons)
 
-for (let addonName in config.addonsConfig) {
-  for (let attr in config.addonsConfig[addonName].map) {
-    editables[addonName].map.values[attr] = config.addonsConfig[addonName].map[attr]
-  }
-}
+// for (let addonName in config.addonsConfig) {
+//   for (let attr in config.addonsConfig[addonName].map) {
+//     editables[addonName].map.values[attr] = config.addonsConfig[addonName].map[attr]
+//   }
+// }
 
 const HmMap = Map(plugins)
 const Hexamaps = {

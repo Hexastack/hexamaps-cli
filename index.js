@@ -94,13 +94,13 @@ switch(command) {
     break
   case 'build':
     //./node_modules/.bin/vue-cli-service build --target lib --name incept ./.tmp/index.js
-    const vueCLI = spawn(`${__dirname}/node_modules/.bin/vue-cli-service`, ['build', '--target', 'lib', '--name', name, '.tmp/main.js'],
+    const vueCLIBuild = spawn(`${__dirname}/node_modules/.bin/vue-cli-service`, ['build', '--target', 'lib', '--name', name, '.tmp/main.js'],
       {
         detached: false,
         stdio: 'inherit'
       }
     )
-    vueCLI.on('exit', (code) => {
+    vueCLIBuild.on('exit', (code) => {
       if (code !== 0) {
         console.error(chalk.red(`'hexamaps-cli build' exited with code ${code}`))
       }
@@ -114,13 +114,13 @@ switch(command) {
   case 'publish':
     break
   case 'run':
-    const vueCLI = spawn(`${__dirname}/node_modules/.bin/vue-cli-service`, ['serve', '.tmp/main.js'],
+    const vueCLIRun = spawn(`${__dirname}/node_modules/.bin/vue-cli-service`, ['serve', '.tmp/main.js'],
       {
         detached: false,
         stdio: 'inherit'
       }
     )
-    vueCLI.on('exit', (code) => {
+    vueCLIRun.on('exit', (code) => {
       if (code !== 0) {
         console.error(chalk.red(`'hexamaps-cli run' exited with code ${code}`))
       }
