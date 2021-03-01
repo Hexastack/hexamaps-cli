@@ -4,7 +4,10 @@
   "description": "##name##, hexamaps addon",
   "main": "index.js",
   "scripts": {
-    "run": "hexamaps-cli run"
+    "run": "hexamaps-cli run",
+    "build": "hexamaps-cli build",
+    "publish": "hexamaps-cli publish",
+    "config": "hexamaps-cli config",
   },
   "author": "",
   "license": "GPL-3.0-only",
