@@ -7,13 +7,13 @@
     "run": "hexamaps-cli run",
     "build": "hexamaps-cli build",
     "publish": "hexamaps-cli publish",
-    "config": "hexamaps-cli config",
+    "config": "hexamaps-cli config"
   },
   "author": "",
   "license": "GPL-3.0-only",
   "dependencies": {
     "vue": "^2.6.8",
-    "hexamaps": "^0.7.1"
+    "hexamaps": "^0.7.3"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.1",

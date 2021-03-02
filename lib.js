@@ -94,10 +94,15 @@ function init(currentDir, name) {
     });
   }
 }
-function build(currentDir, name = "") {
+function build(currentDir) {
+  const addonPrefix = "hm-addon-";
+  let { name } = readPackage(currentDir);
+  if (name.startsWith(addonPrefix)) {
+    name = name.substr(addonPrefix);
+  }
   const vueCLIBuild = spawn(
-    `${currentDir}/node_modules/.bin/vue-cli-service`,
-    ["build", "--target", "lib", "--name", name, ".tmp/main.js"],
+    `${__dirname}/node_modules/.bin/vue-cli-service`,
+    ["build", "--target", "lib", "--name", name, ".tmp/index.js"],
     {
       detached: false,
       stdio: "inherit",
@@ -110,22 +115,7 @@ function build(currentDir, name = "") {
     return;
   });
 }
-function run(currentDir) {
-  const vueCLIRun = spawn(
-    `${currentDir}/node_modules/.bin/vue-cli-service`,
-    ["serve", ".tmp/main.js"],
-    {
-      detached: false,
-      stdio: "inherit",
-    }
-  );
-  vueCLIRun.on("exit", (code) => {
-    if (code !== 0) {
-      console.error(chalk.red(`'hexamaps-cli run' exited with code ${code}`));
-    }
-    return;
-  });
-}
+
 async function config() {
   const confDir = path.join(os.homedir(), ".hexamaps");
   const configFile = path.join(confDir, ".auth.conf");
@@ -196,7 +186,7 @@ async function publish(currentDir) {
   const cookie = readCookie(currentDir);
   const { name, id, jsonconfig, jsonConfigFile } = readPackage(currentDir);
   const buildPath = getBuildPath(currentDir);
-
+  console.log({ buildPath });
   if (!cookie || !name || !buildPath) {
     return;
   }
@@ -232,12 +222,25 @@ async function publish(currentDir) {
   jsonconfig.hexamapsAddonId = jsonconfig.hexamapsAddonId || data.id;
   console.log(
     chalk.green(
-      `Your addon ${
-        data.name
-      } was deployed successfully and it's available at ${data.build}.`
+      `Your addon ${data.name} was deployed successfully and it's available at ${data.build}.`
     )
   );
   fs.writeFileSync(jsonConfigFile, JSON.stringify(jsonconfig, null, 4));
 }
-
-module.exports = { init, build, run, config, publish };
+function start() {
+  const vueCLIRun = spawn(
+    `${__dirname}/node_modules/.bin/vue-cli-service`,
+    ["serve", ".tmp/main.js"],
+    {
+      detached: false,
+      stdio: "inherit",
+    }
+  );
+  vueCLIRun.on("exit", (code) => {
+    if (code !== 0) {
+      console.error(chalk.red(`'hexamaps-cli run' exited with code ${code}`));
+    }
+    return;
+  });
+}
+module.exports = { init, build, start, config, publish };

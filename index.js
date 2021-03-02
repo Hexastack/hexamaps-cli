@@ -27,16 +27,11 @@ yargs
     }
   )
   .command(
-    ["build [name]", "b [name]"],
+    ["build", "b"],
     "Builds the addon",
-    (yargs) => {
-      yargs.positional("name", {
-        type: "string",
-        describe: "Name of the resulting addon.",
-      });
-    },
+    (yargs) => {},
     function(argv) {
-      lib.build(currentDir, argv.name);
+      lib.build(currentDir);
     }
   )
   .command(
@@ -44,7 +39,7 @@ yargs
     "Starts the development environment for the addon.",
     (yargs) => {},
     function(argv) {
-      lib.build(currentDir, argv.name);
+      lib.start();
     }
   )
   .command(

@@ -24,7 +24,7 @@
   "author": "Hexastack <contact@hexastack.com>",
   "license": "BSD-4-Clause",
   "dependencies": {
-    "@vue/cli-service": "^4.5.11",
+    "@vue/cli-service": "^3.0.1",
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
     "read": "^1.0.7",
