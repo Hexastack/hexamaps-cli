@@ -95,11 +95,7 @@ function init(currentDir, name) {
   }
 }
 function build(currentDir) {
-  const addonPrefix = "hm-addon-";
   let { name } = readPackage(currentDir);
-  if (name.startsWith(addonPrefix)) {
-    name = name.substr(addonPrefix);
-  }
   const vueCLIBuild = spawn(
     `${__dirname}/node_modules/.bin/vue-cli-service`,
     ["build", "--target", "lib", "--name", name, ".tmp/index.js"],
@@ -157,6 +153,10 @@ function readPackage(currentDir) {
     const jsonconfig = JSON.parse(
       fs.readFileSync(jsonConfigFile, { encoding: "utf-8" })
     );
+    const addonPrefix = "hm-addon-";
+    if (jsonconfig.name.startsWith(addonPrefix)) {
+      jsonconfig.name = jsonconfig.name.substr(addonPrefix);
+    }
     return {
       jsonConfigFile,
       jsonconfig,
