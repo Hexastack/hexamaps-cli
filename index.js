@@ -10,7 +10,7 @@ yargs
   .usage("$0 <cmd> [args]")
   .command(
     ["init [name]", "i [name]"],
-    "Initializes a new hexamaps addon in the specified directory.",
+    "Initialize a new hexamaps addon in the specified directory.",
     (yargs) => {
       yargs
         .positional("name", {
@@ -25,7 +25,7 @@ yargs
   )
   .command(
     ["build", "b"],
-    "Builds the addon",
+    "Build the addon",
     (yargs) => {},
     function(argv) {
       lib.build(currentDir);
@@ -33,7 +33,7 @@ yargs
   )
   .command(
     ["dev", "start"],
-    "Starts the development environment for the addon.",
+    "Start the development environment for the addon.",
     (yargs) => {},
     function(argv) {
       lib.start();
@@ -48,8 +48,8 @@ yargs
     }
   )
   .command(
-    ["config"],
-    "Starts the development environment for the addon.",
+    ["authenticate"],
+    "Get authenticated to start publishing NOW!!",
     (yargs) => {},
     function(argv) {
       lib.config();
