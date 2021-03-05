@@ -1,6 +1,6 @@
 {
   "name": "hexamaps-cli",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "description": "Command line interface for developing hexamaps' addons.",
   "main": "index.js",
   "bin": {
