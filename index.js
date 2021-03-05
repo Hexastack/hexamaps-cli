@@ -2,11 +2,8 @@
 const yargs = require("yargs");
 const lib = require("./lib");
 const axios = require("axios");
-if (process.env.NODE_ENV === "development") {
-  axios.defaults.baseURL = "http://localhost:1337/";
-} else {
-  axios.defaults.baseURL = "http://hexamaps.com/api/";
-}
+axios.defaults.baseURL =
+  process.env.HEXAMAPS_URL || "https://hexamaps.com/api/v1/";
 const currentDir = process.cwd();
 yargs
   .scriptName("hexamaps")
