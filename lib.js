@@ -136,6 +136,11 @@ async function config() {
     }
   }
   fs.writeFileSync(configFile, cookie, { encoding: "utf-8" });
+  console.log(
+    chalk.green(
+      "Successfully authenticated, you may start publishing your addons."
+    )
+  );
 }
 function readCookie(currentDir) {
   const confDir = path.resolve(os.homedir(), ".hexamaps");
@@ -154,13 +159,10 @@ function readPackage(currentDir) {
       fs.readFileSync(jsonConfigFile, { encoding: "utf-8" })
     );
     const addonPrefix = "hm-addon-";
-    if (jsonconfig.name.startsWith(addonPrefix)) {
-      jsonconfig.name = jsonconfig.name.substr(addonPrefix);
-    }
     return {
       jsonConfigFile,
       jsonconfig,
-      name: jsonconfig.name,
+      name: jsonconfig.name.substr(addonPrefix.length),
       id: jsonconfig.hexamapsAddonId,
     };
   } catch {
@@ -186,7 +188,6 @@ async function publish(currentDir) {
   const cookie = readCookie(currentDir);
   const { name, id, jsonconfig, jsonConfigFile } = readPackage(currentDir);
   const buildPath = getBuildPath(currentDir);
-  console.log({ buildPath });
   if (!cookie || !name || !buildPath) {
     return;
   }
@@ -200,10 +201,6 @@ async function publish(currentDir) {
     // The file name doesn't really matter
     // We just need a .js extension to have it saved on the server
   );
-  if (id) {
-    form_data.append("id", id);
-  }
-  form_data.append("name", "ZERTYHGFDFGHJKJHGFGHUJKJHGFGHUIKJH");
 
   const { data } = await axios.post("addon", form_data, {
     headers: id
