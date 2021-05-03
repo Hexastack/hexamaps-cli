@@ -50,6 +50,10 @@ function init(currentDir, name) {
       `${currentDir}/${name}/public/favicon.ico`
     );
     fs.copyFileSync(
+      `${__dirname}/fixtures/addon/pub/icon.png`,
+      `${currentDir}/${name}/public/icon.png`
+    );
+    fs.copyFileSync(
       `${__dirname}/fixtures/addon/pub/index.html`,
       `${currentDir}/${name}/public/index.html`
     );
@@ -202,19 +206,27 @@ async function publish(currentDir) {
     // We just need a .js extension to have it saved on the server
   );
 
+  try {
+    form_data.append("defaultIcon",
+      fs.createReadStream(path.resolve(currentDir, "public", "icon.png")),
+        { filename: "defaultIcon.png" });
+  } catch (err) {
+    console.error(chalk.red(err));
+  }
+
   const { data } = await axios.post("addon", form_data, {
     headers: id
       ? {
-          ...form_data.getHeaders(),
-          cookie: cookie,
-          name,
-          id,
-        }
+        ...form_data.getHeaders(),
+        cookie: cookie,
+        name,
+        id,
+      }
       : {
-          ...form_data.getHeaders(),
-          cookie: cookie,
-          name,
-        },
+        ...form_data.getHeaders(),
+        cookie: cookie,
+        name,
+      },
   });
   jsonconfig.hexamapsAddonId = jsonconfig.hexamapsAddonId || data.id;
   console.log(
