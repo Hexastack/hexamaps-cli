@@ -206,35 +206,71 @@ async function publish(currentDir) {
     // We just need a .js extension to have it saved on the server
   );
 
+  let response = { data: null }
   try {
-    form_data.append("defaultIcon",
-      fs.createReadStream(path.resolve(currentDir, "public", "icon.png")),
-        { filename: "defaultIcon.png" });
+    response = await axios.post("addon/create", form_data, {
+      headers: id
+        ? {
+          ...form_data.getHeaders(),
+          cookie: cookie,
+          name,
+          id,
+        }
+        : {
+          ...form_data.getHeaders(),
+          cookie: cookie,
+          name,
+        },
+    })
   } catch (err) {
-    console.error(chalk.red(err));
+    console.log(
+      chalk.red(
+        `Your addon ${name} cannot be deployed due to this error:`, err)
+    );
   }
 
-  const { data } = await axios.post("addon", form_data, {
-    headers: id
-      ? {
-        ...form_data.getHeaders(),
-        cookie: cookie,
-        name,
-        id,
-      }
-      : {
-        ...form_data.getHeaders(),
-        cookie: cookie,
-        name,
-      },
-  });
-  jsonconfig.hexamapsAddonId = jsonconfig.hexamapsAddonId || data.id;
-  console.log(
-    chalk.green(
-      `Your addon ${data.name} was deployed successfully and it's available at ${data.build}.`
-    )
-  );
-  fs.writeFileSync(jsonConfigFile, JSON.stringify(jsonconfig, null, 4));
+  if (response.data && response.data.build) {
+    jsonconfig.hexamapsAddonId = jsonconfig.hexamapsAddonId || response.data.id;
+
+    try {
+
+      fs.writeFileSync(jsonConfigFile, JSON.stringify(jsonconfig, null, 4));
+    } catch (err) {
+      console.log(
+        chalk.red(
+          `Configuration cannot be updated due to this error:`, err)
+      );
+    }
+    console.log(
+      chalk.green(
+        `Your addon ${response.data.name} was deployed successfully and it's available at ${response.data.build}.`
+      )
+    );
+
+    const form_data_logo = new FormData();
+    const file = fs.createReadStream(path.resolve(currentDir, "public", "icon.png"));
+    form_data_logo.append("defaultIcon",
+      file,
+      { filename: "defaultIcon.png" })
+    try {
+      await axios.post("addon/upload-icon", form_data_logo,
+        {
+          headers: {
+            ...form_data_logo.getHeaders(),
+            cookie: cookie,
+            name,
+            id,
+          }
+        });
+    } catch (err) {
+      console.log(
+        chalk.yellowBright(
+          `Icon is not added due to this error: `, err
+        )
+      );
+    }
+  }
+  return;
 }
 function start() {
   const vueCLIRun = spawn(
