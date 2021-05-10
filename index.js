@@ -44,7 +44,7 @@ yargs
     "Publish your extension and make it available publicly in hexamaps.",
     (yargs) => {},
     function(argv) {
-      lib.publish(currentDir);
+      lib.build(currentDir).then(() => lib.publish(currentDir));
     }
   )
   .command(
@@ -55,4 +55,7 @@ yargs
       lib.config();
     }
   )
+  .strict()
+  .showHelpOnFail(true)
+  .demandCommand(1, '')
   .help().argv;

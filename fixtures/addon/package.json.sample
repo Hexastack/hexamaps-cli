@@ -4,7 +4,7 @@
   "description": "##name##, hexamaps addon",
   "main": "index.js",
   "scripts": {
-    "run": "hexamaps-cli run",
+    "run": "hexamaps-cli dev",
     "build": "hexamaps-cli build",
     "publish": "hexamaps-cli publish",
     "config": "hexamaps-cli config"
