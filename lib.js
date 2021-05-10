@@ -108,12 +108,15 @@ function build(currentDir) {
       stdio: "inherit",
     }
   );
-  vueCLIBuild.on("exit", (code) => {
-    if (code !== 0) {
-      console.error(chalk.red(`'hexamaps-cli build' exited with code ${code}`));
-    }
-    return;
-  });
+  return new Promise((resolve, reject) => {
+    vueCLIBuild.on("exit", (code) => {
+      if (code !== 0) {
+        console.error(chalk.red(`'hexamaps-cli build' exited with code ${code}`));
+        reject();
+      }
+      resolve();
+    });
+  })
 }
 
 async function config() {
