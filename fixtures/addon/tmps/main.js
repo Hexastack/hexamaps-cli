@@ -87,5 +87,7 @@ Vue.use(plugins.entry, { editor: false })
 
 new Vue({
   editor: false,
+  panEnabled: true,
+  zoomEnabled: true,
   render: h => h(Hexamaps)
 }).$mount('#app')
